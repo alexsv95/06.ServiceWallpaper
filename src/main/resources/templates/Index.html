@@ -8,14 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Калькулятор обоев</h1>
+<h1 align="center">Расчет количества обоев</h1>
 <p>[[${title}]]</p>
-<p data-th-if="${result}">Your result: [[${result}]]</p>
 <form action="">
-    <input type="wallWidth" name="text" placeholder="wallWidth">
-    <input type="wallLength" name="text" placeholder="wallLength">
-    <input type="ceilingHeight" name="text" placeholder="ceilingHeight">
-    <button>Calculate</button>
+    <p align="center"><input type="text" name="wallWidth" placeholder="0"></p>
+    <p align="center"><input type="text" name="wallLength" placeholder="0"></p>
+    <p align="center"><input type="text" name="ceilingHeight" placeholder="0.00"></p>
+    <p align="center"><button>Calculate</button></p>
 </form>
+<p align="center" data-th-if="${result}">Для оклейки комнаты нобходимо <strong>[[ ${#numbers.formatDecimal(result, 0, 0)} ]]</strong> рулонов обоев шириной – 1,06 м, длиной – 10 м.</p>
 </body>
 </html>
